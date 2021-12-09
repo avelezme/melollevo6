@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-
+  #home
+  get("/", :controller => "listings", :action => "homepage")
 
   # Routes for the Bid resource:
 

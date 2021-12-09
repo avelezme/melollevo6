@@ -1,4 +1,9 @@
 class ListingsController < ApplicationController
+  
+  def homepage
+    render({ :template => "listings/home.html.erb"})   
+  end
+  
   def index
     matching_listings = Listing.all
 
