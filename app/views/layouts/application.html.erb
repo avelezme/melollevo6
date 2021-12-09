@@ -37,6 +37,10 @@
           <a href="/listings"> Listings (Index)</a>
         </li>
       </ul>
+
+      <%= session.fetch(:user_id) %>
+      
+
     </nav>
 
     <% if notice.present? %>
