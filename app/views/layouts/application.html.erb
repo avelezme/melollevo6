@@ -24,13 +24,22 @@
     <a href="/"><h1>Melollevo</h1></a>
 
     <div>
-      <a href="/user_sign_in"><button>Sign In</button></a>
-      <a href="/user_sign_up"><button>Sign Up</button></a>
-      <a href="/user_sign_out"><button>Sign Out</button></a>
+      <% if @current_user == nil %>
+      <a href="/user_sign_in"><button>Log in</button></a>
+      <a href="/user_sign_up"><button>Sign up</button></a>
+      <% else %>
+      <a href="/user_sign_out"><button>Log out</button></a>        
+      <a href="/listings"><button>Listings</button></a>
+      <a href="/users/<%= @current_user.id %>"><button>User Profile</button></a>
+      <a href="/users"><button>User Index</button></a>
+      <a href="/edit_user_profile"><button>User settings</button></a>
+
+      <% end %>
     </div>
 
-    <% active_session = session.fetch(:user_id) %>
-
+    <div>
+    <%= active_session = session.fetch(:user_id) %>
+    </div>
     <hr>
 
     </nav>
