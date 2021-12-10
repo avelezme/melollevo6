@@ -44,7 +44,7 @@
         Image
       </dt>
       <dd>
-        <%= @the_listing.image %>
+        <img src= <%= @the_listing.image %>>
       </dd>
 
       <dt>
@@ -88,7 +88,7 @@
   <input id="browser_listing_id" type="hidden" value="<%= @the_listing.id %>" name="query_listing_id">
 
   <label for="browser_bid">Bid</label>
-  <textarea id="browser_bid" name="input_body" placeholder="Enter a bid..."></textarea>
+  <textarea id="browser_bid" name="query_buyer_id" placeholder="Enter a bid..."></textarea>
 
   <button>Place bid!</button>
 </form>
