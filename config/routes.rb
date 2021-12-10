@@ -68,4 +68,24 @@ Rails.application.routes.draw do
              
   #------------------------------
 
+
+  
+  # CREATE RECORD
+  post("/insert_user", { :controller => "user_authentication", :action => "create"  })
+      
+  # READ
+  get("/users", {:controller => "user_authentication", :action => "index"})
+  get("/users/:the_username", {:controller => "user_authentication", :action => "show"})
+
+
+  # EDIT PROFILE FORM        
+  get("/edit_user_profile", { :controller => "user_authentication", :action => "edit_profile_form" })       
+  # UPDATE RECORD
+  post("/modify_user", { :controller => "user_authentication", :action => "update" })
+
+  # DELETE RECORD
+  get("/cancel_user_account", { :controller => "user_authentication", :action => "destroy" })
+
+
+
 end
