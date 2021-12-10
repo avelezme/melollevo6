@@ -21,25 +21,17 @@
 
     <nav>
 
-    <table>
-      <tr> <a href="/user_sign_in"><button>Sign In</button></a>
-      </tr>
+    <a href="/"><h1>Melollevo</h1></a>
 
-      <tr> <a href="/user_sign_up"><button>Sign Up</button></a>
-      </tr>
+    <div>
+      <a href="/user_sign_in"><button>Sign In</button></a>
+      <a href="/user_sign_up"><button>Sign Up</button></a>
+      <a href="/user_sign_out"><button>Sign Out</button></a>
+    </div>
 
-      <tr> <a href="/user_sign_out"><button>Sign Out</button></a>
-      </tr>
-    </table>
+    <% active_session = session.fetch(:user_id) %>
 
-      <ul>
-        <li>
-          <a href="/listings"> Listings (Index)</a>
-        </li>
-      </ul>
-
-      <%= session.fetch(:user_id) %>
-      
+    <hr>
 
     </nav>
 
