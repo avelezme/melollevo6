@@ -69,13 +69,13 @@ Rails.application.routes.draw do
   #------------------------------
 
 
-  
+
   # CREATE RECORD
   post("/insert_user", { :controller => "user_authentication", :action => "create"  })
       
   # READ
   get("/users", {:controller => "user_authentication", :action => "index"})
-  get("/users/:the_username", {:controller => "user_authentication", :action => "show"})
+  get("/users/:path_id", {:controller => "user_authentication", :action => "show"})
 
 
   # EDIT PROFILE FORM        
